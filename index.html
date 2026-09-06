@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jason Thompson - Fan Page</title>
+<meta name="description" content="A fan page for actor Jason Thompson - Dr. Patrick Drake on General Hospital, Billy Abbott on The Young and the Restless.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2320;
+    --paper: #faf6f0;
+    --accent: #b3541e;
+    --accent-soft: #f3e2d4;
+    --muted: #7a6f66;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    padding: 72px 0 56px;
+    text-align: center;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(44px, 8vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    margin-top: 16px;
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-card {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 44px;
+    align-items: center;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 24px 60px -30px rgba(43,35,32,0.35);
+    margin-bottom: 56px;
+  }
+  .hero-card img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+    aspect-ratio: 600/927;
+    object-fit: cover;
+  }
+  .quickfacts h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 28px;
+  }
+  .fact .k {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .fact .v { font-size: 15px; font-weight: 500; }
+
+  section { margin-bottom: 56px; }
+  h2.section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  h2.section-title span { color: var(--accent); }
+
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .role {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 16px 40px -28px rgba(43,35,32,0.4);
+  }
+  .role .show {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .role h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    margin: 6px 0 10px;
+  }
+  .role p { font-size: 14.5px; color: #4d443e; }
+  .role .years { display: inline-block; margin-top: 12px; font-size: 12.5px; font-weight: 600; background: var(--accent-soft); color: var(--accent); padding: 3px 10px; border-radius: 999px; }
+
+  .timeline { border-left: 3px solid var(--accent-soft); padding-left: 26px; }
+  .tl-item { position: relative; padding-bottom: 22px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -33.5px;
+    top: 6px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .tl-item .yr { font-weight: 700; font-family: 'Fraunces', Georgia, serif; font-size: 18px; }
+  .tl-item p { font-size: 14.5px; color: #4d443e; }
+
+  .emmys {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 20px;
+    padding: 40px 36px;
+  }
+  .emmys h2.section-title { color: var(--paper); }
+  .emmys .big {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    color: #f4c99d;
+    margin-bottom: 14px;
+  }
+  .emmys ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; font-size: 14.5px; }
+  .emmys li::before { content: '· '; color: #f4c99d; font-weight: 700; }
+  .emmys li b { color: #f4c99d; }
+
+  footer {
+    border-top: 1px solid #e7ddd2;
+    padding: 28px 0 44px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 720px) {
+    .hero-card { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+    .hero-card img { max-width: 300px; margin: 0 auto; }
+    .roles, .facts-grid, .emmys ul { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="eyebrow">A fan page</div>
+  <h1>Jason Thompson</h1>
+  <p class="tagline">From Port Charles to Genoa City - two decades of one of daytime television's most beloved leading men.</p>
+</header>
+
+<main class="wrap">
+
+  <div class="hero-card">
+    <img src="jason-thompson.jpg" alt="Jason Thompson at General Hospital's 13,000th episode celebration, January 2014">
+    <div class="quickfacts">
+      <h2>Fast Facts</h2>
+      <div class="facts-grid">
+        <div class="fact"><div class="k">Full name</div><div class="v">Jason Craig Thompson</div></div>
+        <div class="fact"><div class="k">Born</div><div class="v">November 20, 1976, St. Albert, Alberta, Canada</div></div>
+        <div class="fact"><div class="k">Occupation</div><div class="v">Actor (2000-present)</div></div>
+        <div class="fact"><div class="k">Best known as</div><div class="v">Dr. Patrick Drake (GH) &amp; Billy Abbott (Y&amp;R)</div></div>
+        <div class="fact"><div class="k">Daytime Emmys</div><div class="v">1 win, 8 nominations</div></div>
+        <div class="fact"><div class="k">Family</div><div class="v">Married to Paloma Jonas (2015); two children</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="section-title">The <span>Roles</span></h2>
+    <div class="roles">
+      <div class="role">
+        <div class="show">General Hospital - ABC</div>
+        <h3>Dr. Patrick Drake</h3>
+        <p>The cocky neurosurgeon with a heart of gold. Half of the supercouple "Scrubs" with Robin Scorpio, son of rock legend Noah Drake (Rick Springfield) - Patrick grew from resident playboy to devoted husband and father to Emma over ten years in Port Charles.</p>
+        <span class="years">2005 - 2016</span>
+      </div>
+      <div class="role">
+        <div class="show">The Young and the Restless - CBS</div>
+        <h3>Billy Abbott</h3>
+        <p>Genoa City's charming screw-up, forever chasing redemption. Thompson took over the role in 2016 and made it his own - and won a Daytime Emmy for it in 2020.</p>
+        <span class="years">2016 - present</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">The <span>Journey</span></h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="yr">1976</div><p>Born in St. Albert, Alberta. Discovered at 16 by a model scout while working at an Edmonton restaurant.</p></div>
+      <div class="tl-item"><div class="yr">1994</div><p>Leaves home at 18 to model. Runway, print, and commercials follow - including three iconic Gap TV spots in 1999 ("Everybody in Cords," "Everybody in Leather," "Everybody in Vests").</p></div>
+      <div class="tl-item"><div class="yr">2000s</div><p>Commits to acting: guest spots on Felicity, Flipper, and Castle, plus film leads in Wishmaster: The Prophecy Fulfilled and Divide, and stage work in Los Angeles.</p></div>
+      <div class="tl-item"><div class="yr">2005</div><p>Joins General Hospital as Dr. Patrick Drake in December. Becomes an original cast member of the primetime spin-off GH: Night Shift in 2007.</p></div>
+      <div class="tl-item"><div class="yr">2015</div><p>Plays original GH character Dr. Steve Hardy in a flashback for the show's 52nd anniversary. Marries longtime girlfriend Paloma Jonas in San Pancho, Mexico. Announces his exit from GH in October; final episode airs January 7, 2016.</p></div>
+      <div class="tl-item"><div class="yr">2016</div><p>Debuts as Billy Abbott on The Young and the Restless on January 14. Welcomes a son in May; a daughter, Rome Coco, arrives in September 2017.</p></div>
+      <div class="tl-item"><div class="yr">2020</div><p>Wins the Daytime Emmy Award for Outstanding Lead Actor in a Drama Series for Y&amp;R.</p></div>
+    </div>
+  </section>
+
+  <section class="emmys">
+    <h2 class="section-title">Awards</h2>
+    <div class="big">Daytime Emmy: 1 win, 8 nominations</div>
+    <ul>
+      <li><b>2020 - WON:</b> Lead Actor, The Young and the Restless</li>
+      <li>2011 - Supporting Actor, General Hospital</li>
+      <li>2012 - Supporting Actor, General Hospital</li>
+      <li>2013 - Lead Actor, General Hospital</li>
+      <li>2014 - Lead Actor, General Hospital</li>
+      <li>2015 - Lead Actor, General Hospital</li>
+      <li>2022 - Lead Actor, The Young and the Restless</li>
+      <li>2023 - Lead Actor, The Young and the Restless</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>An unofficial fan page. Photo: <a href="https://commons.wikimedia.org/wiki/File:General_Hospital_cast_2014.jpg">Mingle Media TV</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY-SA 2.0</a>, via Wikimedia Commons - cropped from the cast photo at General Hospital's 13,000th episode celebration, January 2014. Facts sourced from public records including Wikipedia.</p>
+  </div>
+</footer>
+
+</body>
+</html>
